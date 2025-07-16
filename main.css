@@ -1,0 +1,389 @@
+/* Global Styles */  
+* {  
+    box-sizing: border-box;  
+}  
+    
+body {  
+    margin: 0;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    background-color: #f4f2f2;  
+    color: #4a4a4a;  
+    overflow-y: auto;  
+}  
+    
+/* Offer Bar Styles */  
+.offer-bar {  
+    width: 100%;  
+    padding: 10px 0;  
+    background: linear-gradient(90deg, #c0392b, #e74c3c);  
+    color: #fff;  
+    font-size: 1.1rem;  
+    text-align: center;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    z-index: 100;  
+    overflow: hidden;  
+    height: 40px;  
+}  
+    
+.hurry-up,  
+.discount {  
+    position: absolute;  
+    width: 100%;  
+    top: 0;  
+    left: 0;  
+    text-align: center;  
+    opacity: 0;  
+    margin: 0;  
+    line-height: 40px;  
+}  
+    
+.hurry-up {  
+    animation: fadeOut 3s forwards;  
+}  
+    
+.discount {  
+    animation: fadeIn 3s 3s forwards; /* Delayed by 3 seconds */  
+}  
+    
+@keyframes fadeOut {  
+    from { opacity: 1; }  
+    to { opacity: 0; }  
+}  
+    
+@keyframes fadeIn {  
+    from { opacity: 0; }  
+    to { opacity: 1; }  
+}  
+    
+/* Navigation Bar Styles */  
+.navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    background-color: #34495e;  
+    color: #fff;  
+    padding: 15px 30px;  
+    position: relative;  
+    top: 40px; /* Adjust to account for fixed offer bar */  
+    z-index: 90;  
+}  
+    
+.navbar .nav-links {  
+    display: flex;  
+    gap: 30px;  
+}  
+    
+.navbar .nav-links a {  
+    color: #ecf0f1;  
+    text-decoration: none;  
+    font-size: 1rem;  
+    transition: color 0.3s ease;  
+}  
+    
+.navbar .nav-links a:hover {  
+    color: #bdc3c7;  
+}  
+    
+.navbar .right-section {  
+    display: flex;  
+    gap: 20px;  
+    align-items: center;  
+}  
+    
+.navbar .right-section a {  
+    color: #ecf0f1;  
+    text-decoration: none;  
+    font-size: 1rem;  
+    transition: color 0.3s ease;  
+}  
+    
+.navbar .right-section a:hover {  
+    color: #bdc3c7;  
+}  
+    
+/* Section Below Navigation */  
+.below-navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 20px 30px;  
+    background-color: #fdfdfd;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);  
+    margin-top: 20px; /* Increase this value to add more space */  
+}  
+  
+.below-navbar .website-name {  
+    font-size: 2.5rem;  
+    font-weight: bold;  
+    font-family: 'Georgia', serif;  
+    color: #2c3e50;  
+}  
+    
+.below-navbar .search-bar {  
+    display: flex;  
+    align-items: center;  
+    gap: 15px;  
+    flex: 1;  
+    justify-content: center;  
+}  
+    
+.below-navbar .search-bar select,  
+.below-navbar .search-bar input {  
+    padding: 10px 15px;  
+    font-size: 1rem;  
+    border: 1px solid #bdc3c7;  
+    border-radius: 25px;  
+    outline: none;  
+    transition: border-color 0.3s ease;  
+}  
+    
+.below-navbar .search-bar select:focus,  
+.below-navbar .search-bar input:focus {  
+    border-color: #e74c3c;  
+}  
+    
+.below-navbar .search-bar button {  
+    padding: 10px 20px;  
+    font-size: 1rem;  
+    background-color: #e74c3c;  
+    color: #fff;  
+    border: none;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+    
+.below-navbar .search-bar button:hover {  
+    background-color: #c0392b;  
+}  
+    
+.below-navbar .cart {  
+    position: relative;  
+}  
+    
+.below-navbar .cart-icon {  
+    font-size: 1.8rem;  
+    cursor: pointer;  
+}  
+    
+.below-navbar .cart .cart-badge {  
+    position: absolute;  
+    top: -5px;  
+    right: -10px;  
+    background-color: #c0392b;  
+    color: #fff;  
+    font-size: 0.8rem;  
+    padding: 3px 7px;  
+    border-radius: 50%;  
+}  
+    
+/* Hero Section */  
+.hero-section {  
+    position: relative;  
+    width: 100%;  
+    height: 70vh;  
+    background-image: url('prac/Web Pages/image/cover.jpg');  
+    background-size: cover;  
+    background-position: center;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    margin-top: 20px;  
+}  
+    
+.hero-content {  
+    text-align: center;  
+    background-color: rgba(0, 0, 0, 0.55);  
+    padding: 30px 20px;  
+    border-radius: 10px;  
+    max-width: 90%;  
+}  
+    
+.hero-content h1 {  
+    font-size: 3rem;  
+    margin-bottom: 20px;  
+    color: #fff;  
+}  
+    
+.hero-content p {  
+    font-size: 1.2rem;  
+    margin-bottom: 20px;  
+    color: #f0f0f0;  
+}  
+    
+.hero-content .shop-now-btn {  
+    display: inline-block;  
+    padding: 10px 25px;  
+    font-size: 1rem;  
+    background-color: #e67e22;  
+    color: #fff;  
+    text-decoration: none;  
+    border-radius: 5px;  
+    transition: background-color 0.3s ease;  
+}  
+    
+.hero-content .shop-now-btn:hover {  
+    background-color: #d35400;  
+}  
+    
+/* Books Section */  
+.books-section {  
+    padding: 40px 20px;  
+    margin: 40px auto;  
+    max-width: 1200px;  
+    background-color: #fff;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  
+}  
+    
+.books-section h2 {  
+    font-size: 2rem;  
+    font-weight: bold;  
+    color: #c0392b;  
+    margin-bottom: 30px;  
+    text-align: center;  
+    text-transform: uppercase;  
+    letter-spacing: 1px;  
+}  
+    
+/* Book Container Layout */  
+.book-container {  
+    display: flex;  
+    justify-content: center;  
+    gap: 20px;  
+    flex-wrap: wrap;  
+}  
+    
+/* Individual Book Card */  
+.book-card {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    height: 400px; /* Fixed height for consistency */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    
+    /* Flexbox for vertical distribution */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+  
+    
+.book-card:hover {  
+    transform: translateY(-5px);  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  
+}  
+    
+.book-card img {  
+    width: 100%;  
+    height: auto;  
+    border-radius: 5px;  
+}  
+    
+.book-card h3 {  
+    font-size: 1.1rem;  
+    margin: 10px 0;  
+    color: #333;  
+}  
+    
+.book-card p {  
+    font-size: 0.9rem;  
+    color: #777;  
+    margin-bottom: 10px;  
+}  
+    
+/* Price Styling */  
+.book-card .price {  
+    font-size: 1rem;  
+    font-weight: bold;  
+    color: #e74c3c;  
+    margin-bottom: 15px;  
+}  
+    
+/* Add to Cart Button Styling */  
+.book-card button {
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;       /* Push the button to the bottom */
+    align-self: center;     /* Center the button horizontally */
+}
+    
+.book-card button:hover {  
+    background-color: #2c3e50;  
+}  
+    
+/* Mobile Responsiveness */  
+@media (max-width: 768px) {  
+    .navbar {  
+      flex-direction: column;  
+      gap: 10px;  
+    }  
+      
+    .below-navbar {  
+      flex-direction: column;  
+      gap: 15px;  
+      text-align: center;  
+    }  
+      
+    .book-container {  
+      flex-direction: column;  
+      align-items: center;  
+    }  
+}  
+
+/* ================================================================= */
+/* New Animations and Transitions - Added Without Removing Prior Code  */
+/* ================================================================= */
+
+/* 1. Pulse Animation for the Shop Now Button */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hero-content .shop-now-btn {
+  animation: pulse 2s infinite;
+}
+
+/* 2. Slide-In Animation for the Hero Content */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  animation: slideIn 1s ease-out;
+}
+
+/* 3. Fade-In-Up Animation for Each Book Card on Page Load */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.book-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* 4. Image Zoom Transition on Hover for Book Cards */
+.book-card img {
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+  transform: scale(1.1);
+}
